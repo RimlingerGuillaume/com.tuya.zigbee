@@ -7,7 +7,13 @@ class wall_remote_4_gang_2 extends ZigBeeDevice {
 
     async onNodeInit({zclNode}) {
 
-      var debounce = 0;
+      var debounce = 0;  
+
+      //  var debounce = 1; 
+      //  Is it the solution of the "double simple click" ?
+      //  https://www.freecodecamp.org/news/javascript-debounce-example/
+      
+      
       this.printNode();
 
       const node = await this.homey.zigbee.getNode(this);
