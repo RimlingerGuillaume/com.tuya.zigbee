@@ -7,7 +7,13 @@ class wall_remote_4_gang_2 extends ZigBeeDevice {
 
     async onNodeInit({zclNode}) {
 
-      var debounce = 0;
+      var debounce = 0;  
+      
+      // I have issue "double simple click" (it's making 2 simple click each time)
+      // can you try with   var debounce = 1;
+      // Guillaume Rimlinger 
+
+      
       this.printNode();
 
       const node = await this.homey.zigbee.getNode(this);
